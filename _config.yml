@@ -1,26 +1,17 @@
-# Site settings
 title: "ENGRAM"
-description: "Sistema Cognitivo Artificial - Arquitectura Avanzada de Procesamiento Neural"
+description: "Advanced Cognitive Architecture for Artificial Intelligence Systems"
 url: "https://engram.cloud"
 baseurl: ""
 author: "ENGRAM Systems"
 
-# Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
 
-# Plugins
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# SEO settings
-twitter:
-  username: engram
-  card: summary_large_image
-
-# Exclude from processing
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -34,19 +25,17 @@ exclude:
   - vendor/ruby/
   - README.md
 
-# Collections
 collections:
   posts:
     output: true
     permalink: /:collection/:name/
 
-# Defaults
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: "default"
   - scope:
       path: ""
     values:

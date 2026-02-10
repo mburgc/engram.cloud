@@ -1,69 +1,69 @@
 # engram.cloud
 
-Sistema Cognitivo Artificial - Arquitectura Avanzada de Procesamiento Neural
+Advanced Cognitive Architecture for Artificial Intelligence Systems
 
-## Descripción
+## Overview
 
-ENGRAM es una plataforma de inteligencia artificial que integra arquitectura neural avanzada, 
-memoria holográfica y capacidades de razonamiento abstracto en un sistema cognitivo unificado.
+ENGRAM is an artificial intelligence platform integrating advanced neural architecture, 
+holographic memory, and abstract reasoning capabilities into a unified cognitive system.
 
-## Estructura del Sitio
+## Site Structure
 
-Este repositorio contiene el sitio web estático de ENGRAM, construido con Jekyll y 
-desplegado automáticamente en GitHub Pages.
+This repository contains the static website for ENGRAM, built with Jekyll and 
+automatically deployed to GitHub Pages.
 
-### Tecnologías
+### Technologies
 
-- **Jekyll**: Generador de sitios estáticos
-- **Sass**: Preprocesador CSS
-- **GitHub Pages**: Hosting y despliegue continuo
-- **GitHub Actions**: Automatización de builds
+- **Jekyll**: Static site generator
+- **Sass**: CSS preprocessor
+- **GitHub Pages**: Hosting and continuous deployment
+- **GitHub Actions**: Build automation
 
-### Estructura de Archivos
+### File Structure
 
 ```
 .
-├── _config.yml           # Configuración de Jekyll
-├── _layouts/             # Templates HTML
-│   └── default.html      # Layout principal
-├── _sass/                # Estilos Sass
-│   └── main.scss         # Estilos principales
-├── assets/               # Recursos estáticos
-│   ├── css/              # Hojas de estilo
+├── _config.yml           # Jekyll configuration
+├── _layouts/             # HTML templates
+│   └── default.html      # Main layout
+├── _sass/                # Sass stylesheets
+│   └── main.scss         # Main styles
+├── assets/               # Static assets
+│   ├── css/              # Stylesheets
 │   ├── js/               # JavaScript
-│   └── images/           # Imágenes
-├── index.html            # Página principal
+│   └── images/           # Images
+├── index.html            # Main page
 └── .github/workflows/    # GitHub Actions
     └── jekyll-gh-pages.yml
 ```
 
-## Desarrollo Local
+## Local Development
 
-### Requisitos
+### Requirements
 
-- Ruby 2.7 o superior
+- Ruby 2.7 or higher
 - Bundler
 
-### Instalación
+### Installation
 
 ```bash
-# Instalar dependencias
+# Install dependencies
 bundle install
 
-# Servidor de desarrollo
+# Development server
 bundle exec jekyll serve
 
-# Con live reload
+# With live reload
 bundle exec jekyll serve --livereload
 ```
 
-El sitio estará disponible en `http://localhost:4000`
+The site will be available at `http://localhost:4000`
 
-## Despliegue
+## Deployment
 
-El sitio se despliega automáticamente en GitHub Pages cuando se hace push a la rama `main`.
+The site deploys automatically to GitHub Pages when pushing to the `main` branch.
 
-## Licencia
+## License
 
-© 2026 ENGRAM Systems. Todos los derechos reservados.
+© 2026 ENGRAM Systems. All rights reserved.
 
