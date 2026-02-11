@@ -524,6 +524,40 @@ The complete library of 30+ production-ready prompts used to generate the neural
 
 ---
 
+### Annex C: Cognitive Architecture Technical Documentation
+**[📚 COGNITIVE_ARCHITECTURE_HEBBIAN_PLASTICITY.md](COGNITIVE_ARCHITECTURE_HEBBIAN_PLASTICITY.md)**
+
+The complete technical documentation describing the cognitive architecture with Hebbian plasticity in knowledge graphs. This comprehensive paper details the theoretical foundations, system architecture, implementation details, and experimental results of the ENGRAM system.
+
+**What's Included:**
+- Complete theoretical foundations of Hebbian plasticity applied to knowledge graphs
+- Detailed system architecture and component diagrams
+- Memory system design with graph-node structures
+- Plastify module implementation with code examples
+- Experimental results and metrics analysis
+- Context learning capabilities and new knowledge generation
+- Roadmap for future development (v0.2.0+)
+- Scientific implications and applications
+
+**Key Topics Covered:**
+1. **Executive Summary** - System overview and key innovations
+2. **Theoretical Foundations** - Hebb's principle and bio-inspired architecture
+3. **System Architecture** - Hybrid cognitive system design
+4. **Language Processing Layer** - LLM integration and embeddings
+5. **Graph-Node Memory System** - Data models and KùzuDB backend
+6. **Vector Geometry** - Semantic space and LanceDB indexing
+7. **Plastify Module** - Hebbian rules, synaptic competition, shared neighbor discovery
+8. **Technical Implementation** - APIs, algorithms, and code structure
+9. **Experimental Results** - Metrics, analysis, and knowledge generation
+10. **Implications and Applications** - Scientific relevance and potential uses
+11. **Conclusions** - Achievements, contributions, and future roadmap
+
+**Perfect for:** Researchers, AI engineers, neuroscientists, and anyone interested in the technical implementation of bio-inspired cognitive systems. The document provides both theoretical depth and practical implementation details.
+
+**Original Document:** The Spanish version of this document is also available as `ARQUITECTURA_COGNITIVA_PLASTICIDAD_HEBBIANA.md`.
+
+---
+
 ## Brand Identity
 
 ### Core Message
