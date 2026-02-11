@@ -135,10 +135,10 @@
   }
 
   function initMetricsCounter() {
-    const metrics = document.querySelectorAll('.metric-value[data-count]');
+    const metrics = document.querySelectorAll('.metric-value[data-count], .hero-metric-value[data-count]');
     
     const observerOptions = {
-      threshold: 0.5,
+      threshold: 0.1,
       rootMargin: '0px'
     };
 

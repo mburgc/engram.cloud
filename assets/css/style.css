@@ -1071,6 +1071,14 @@ p {
   
   .hero-metrics {
     gap: var(--space-md);
+    justify-content: center;
+    width: 100%;
+    padding: 0 var(--space-sm);
+  }
+  
+  .hero-metric {
+    flex: 0 0 calc(50% - var(--space-md));
+    min-width: 140px;
   }
   
   .hero-metric-value {
@@ -1079,6 +1087,12 @@ p {
   
   .pipeline {
     flex-direction: column;
+    align-items: center;
+  }
+  
+  .pipeline-step {
+    width: 100%;
+    max-width: 300px;
   }
   
   .pipeline-connector {
@@ -1089,10 +1103,56 @@ p {
   
   .newsletter-form {
     flex-direction: column;
+    align-items: center;
   }
   
   .viz-container {
     height: 350px;
+  }
+  
+  .arch-layer {
+    flex-direction: column;
+  }
+  
+  .arch-component {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .arch-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .section-header {
+    padding: 0 var(--space-sm);
+    text-align: center;
+  }
+  
+  .section-header h2,
+  .section-header p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .card {
+    margin-left: var(--space-sm);
+    margin-right: var(--space-sm);
+    width: calc(100% - var(--space-md));
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .grid-2 > .card,
+  .grid-3 > .card {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1108,9 +1168,31 @@ p {
     align-items: center;
   }
   
+  .hero-metrics {
+    gap: var(--space-sm);
+  }
+  
+  .hero-metric {
+    flex: 0 0 50%;
+    min-width: 120px;
+    padding: var(--space-xs);
+  }
+  
+  .hero-metric-value {
+    font-size: var(--text-lg);
+  }
+  
   .btn {
     width: 100%;
     max-width: 300px;
+  }
+  
+  .container {
+    padding: 0 var(--space-sm);
+  }
+  
+  .card {
+    padding: var(--space-md);
   }
 }
 
