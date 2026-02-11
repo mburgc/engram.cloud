@@ -453,17 +453,21 @@ p {
    ============================================ */
 .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--space-md);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .metric-card {
   background: var(--color-bg-card);
   border: var(--border-thin);
   border-radius: var(--radius-md);
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-sm);
   text-align: center;
   transition: all var(--transition-base);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .metric-card:hover {
@@ -480,6 +484,8 @@ p {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: var(--space-xs);
+  white-space: nowrap;
+  overflow: visible;
 }
 
 .metric-label {
@@ -713,10 +719,21 @@ p {
 .hero-subtitle {
   font-size: var(--text-lg);
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-tagline {
+  font-size: var(--text-base);
+  color: var(--color-cyan);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  text-shadow: 0 0 20px var(--color-cyan-glow);
 }
 
 .hero-cta {
@@ -1154,6 +1171,42 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
+  
+  .mobile-stack {
+    grid-template-columns: 1fr;
+  }
+  
+  .mobile-stack > * {
+    width: 100%;
+  }
+  
+  .mobile-full-width {
+    width: calc(100% - var(--space-md));
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .mobile-text-center {
+    text-align: center;
+  }
+  
+  .mobile-header-center {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .mobile-blockquote {
+    border-left: none;
+    border-top: 3px solid var(--color-violet);
+    padding-left: 0;
+    padding-top: var(--space-sm);
+    text-align: center;
+  }
+  
+  .mobile-code pre {
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1193,6 +1246,45 @@ p {
   
   .card {
     padding: var(--space-md);
+  }
+  
+  .comparison-table {
+    font-size: var(--text-xs);
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: var(--space-xs);
+  }
+  
+  .comparison-table th {
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
+  }
+  
+  .comparison-table td {
+    font-size: var(--text-xs);
+  }
+  
+  .badge {
+    padding: 2px 6px;
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .comparison-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .metric-value {
+    font-size: var(--text-lg);
+  }
+  
+  .metric-label {
+    font-size: var(--text-xs);
   }
 }
 
@@ -1398,10 +1490,19 @@ p {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(26, 26, 37, 0.95) 0%,
-    rgba(18, 18, 26, 0.9) 100%
+    rgba(26, 26, 37, 0.85) 0%,
+    rgba(18, 18, 26, 0.8) 100%
   );
   z-index: 0;
+}
+
+.card-with-bg.bg-glass-neural::before,
+.card-with-bg.bg-data-flow-micro::before {
+  background: linear-gradient(
+    180deg,
+    rgba(26, 26, 37, 0.75) 0%,
+    rgba(18, 18, 26, 0.7) 100%
+  );
 }
 
 .card-with-bg > * {

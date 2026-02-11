@@ -20,10 +20,14 @@ description: Cognitive Architecture with Hebbian Plasticity - A Biologically-Ins
       </h1>
       
       <p class="hero-subtitle animate-fade-in-up stagger-2">
-        A biologically-inspired semantic memory system integrating LLMs with knowledge graphs. 
+        A biologically-inspired semantic memory system integrating LLMs with knowledge graphs.
         Powered by the first successful application of Hebbian plasticity principles to computational knowledge graphs.
       </p>
-      
+
+      <p class="hero-tagline animate-fade-in-up stagger-2">
+        The First Bio-Synthetic Cognitive System Capable of True Learning
+      </p>
+
       <div class="hero-cta animate-fade-in-up stagger-3">
         <a href="#architecture" class="btn btn-primary btn-glow">Explore Architecture</a>
         <a href="#results" class="btn btn-secondary">View Results</a>
@@ -246,23 +250,23 @@ description: Cognitive Architecture with Hebbian Plasticity - A Biologically-Ins
         <h2>Hebb's Principle</h2>
       </div>
 
-      <div class="grid grid-2">
+      <div class="grid grid-2 mobile-stack">
         <div class="reveal">
-          <div class="card" style="height: 100%;">
-            <h3 class="border-accent">Donald Hebb's Original Formulation (1949)</h3>
-            <blockquote style="font-style: italic; color: var(--color-text-secondary); border-left: 3px solid var(--color-violet); padding-left: var(--space-md); margin: var(--space-md) 0;">
+          <div class="card mobile-full-width" style="height: 100%;">
+            <h3 class="border-accent mobile-text-center">Donald Hebb's Original Formulation (1949)</h3>
+            <blockquote class="mobile-blockquote">
               "When an axon of cell A is near enough to excite a cell B and repeatedly or persistently 
               takes part in firing it, some growth process or metabolic change takes place in one or 
               both cells such that A's efficiency, as one of the cells firing B, is increased."
             </blockquote>
-            <p><strong>— Donald Hebb, Organization of Behavior</strong></p>
+            <p class="mobile-text-center"><strong>— Donald Hebb, Organization of Behavior</strong></p>
           </div>
         </div>
 
         <div class="reveal">
-          <div class="card" style="height: 100%;">
-            <h3 class="border-accent-2">Computational Translation</h3>
-            <div class="code-block">
+          <div class="card mobile-full-width" style="height: 100%;">
+            <h3 class="border-accent-2 mobile-text-center">Computational Translation</h3>
+            <div class="code-block mobile-code">
               <pre>Δwᵢⱼ = η · log(1 + f_co)
 
 Where:
@@ -270,7 +274,7 @@ Where:
   η (eta) = Learning rate
   f_co = Co-occurrence frequency</pre>
             </div>
-            <p style="margin-top: var(--space-md);">
+            <p class="mobile-text-center" style="margin-top: var(--space-md);">
               The logarithmic scaling prevents weight explosion while ensuring 
               meaningful updates for frequently co-occurring nodes.
             </p>
@@ -325,10 +329,10 @@ Where:
         <h2>Graph-Node Memory Architecture</h2>
       </div>
 
-      <div class="grid grid-2">
-        <div class="card reveal">
-          <h3 class="border-accent">Node Structure</h3>
-          <div class="code-block">
+      <div class="grid grid-2 mobile-stack">
+        <div class="card reveal mobile-full-width">
+          <h3 class="border-accent mobile-text-center">Node Structure</h3>
+          <div class="code-block mobile-code">
             <pre>Node
 ├── id: UUID
 ├── type: String
@@ -346,9 +350,9 @@ Where:
           </div>
         </div>
 
-        <div class="card reveal">
-          <h3 class="border-accent-2">Edge Structure</h3>
-          <div class="code-block">
+        <div class="card reveal mobile-full-width">
+          <h3 class="border-accent-2 mobile-text-center">Edge Structure</h3>
+          <div class="code-block mobile-code">
             <pre>Edge
 ├── source_id: UUID
 ├── target_id: UUID
@@ -395,16 +399,16 @@ SIMILARITY_THRESHOLD = 0.7</pre>
       </div>
 
       <!-- HEBBIAN RULES -->
-      <div class="grid grid-2" style="margin-top: var(--space-xl);">
-        <div class="card reveal">
-          <div class="card-header">
+      <div class="grid grid-2 mobile-stack" style="margin-top: var(--space-xl);">
+        <div class="card reveal mobile-full-width">
+          <div class="card-header mobile-header-center">
             <div class="card-icon">📈</div>
             <div>
-              <h3 class="card-title">Hebbian Strengthening</h3>
-              <p style="margin: 0; font-size: var(--text-sm);">"Cells that fire together, wire together"</p>
+              <h3 class="card-title mobile-text-center">Hebbian Strengthening</h3>
+              <p class="mobile-text-center" style="margin: 0; font-size: var(--text-sm);">"Cells that fire together, wire together"</p>
             </div>
           </div>
-          <div class="code-block">
+          <div class="code-block mobile-code">
             <pre>async def apply_hebbian_strengthening(
     edge: Edge,
     co_occurrence: int,
@@ -430,15 +434,15 @@ SIMILARITY_THRESHOLD = 0.7</pre>
           </div>
         </div>
 
-        <div class="card reveal">
-          <div class="card-header">
+        <div class="card reveal mobile-full-width">
+          <div class="card-header mobile-header-center">
             <div class="card-icon">🎯</div>
             <div>
-              <h3 class="card-title">Competitive Weakening</h3>
-              <p style="margin: 0; font-size: var(--text-sm);">Similar connections compete, weaker ones decay</p>
+              <h3 class="card-title mobile-text-center">Competitive Weakening</h3>
+              <p class="mobile-text-center" style="margin: 0; font-size: var(--text-sm);">Similar connections compete, weaker ones decay</p>
             </div>
           </div>
-          <div class="code-block">
+          <div class="code-block mobile-code">
             <pre>async def apply_competitive_weakening(
     node: Node,
     similar_nodes: List[Node],
