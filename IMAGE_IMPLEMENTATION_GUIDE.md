@@ -1,25 +1,7 @@
-# Annex A: Visual Asset Integration Guide
-## How 27 AI-Generated Images Were Created and Integrated into ENGRAM
+# Image Implementation Guide for ENGRAM Website
 
-### Overview
-This guide documents the complete workflow for generating and integrating custom neural-themed visual assets into the ENGRAM cognitive architecture website. It serves as a practical reference for understanding how the site's immersive visual experience was achieved.
-
-**What You'll Learn:**
-- How AI-generated images (1200x1200px) were created using ImageZ prompts
-- CSS techniques for integrating backgrounds with overlays
-- Responsive handling strategies for visual consistency
-- Performance optimization for 27 high-quality images
-
-**Technical Stack:**
-- **Generation**: ImageZ AI (Stable Diffusion-based)
-- **Integration**: CSS3 with custom properties
-- **Optimization**: Web-ready PNG format with gradient overlays
-- **Performance**: Lazy loading and parallax effects
-
----
-
-## Image Integration Results
-All 27 generated images have been successfully integrated into the ENGRAM cognitive architecture website, creating a cohesive neural-themed visual experience with consistent cyan/magenta/violet color palette.
+## Overview
+All 27 generated images have been successfully integrated into the ENGRAM cognitive architecture website. The images are 1200x1200 pixels and have been optimized for web use with CSS overlays and responsive handling.
 
 ## Image Mapping
 
