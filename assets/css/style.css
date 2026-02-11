@@ -453,9 +453,9 @@ p {
    ============================================ */
 .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
-  max-width: 1400px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -463,11 +463,15 @@ p {
   background: var(--color-bg-card);
   border: var(--border-thin);
   border-radius: var(--radius-md);
-  padding: var(--space-md) var(--space-sm);
+  padding: var(--space-md) var(--space-xs);
   text-align: center;
   transition: all var(--transition-base);
   min-width: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .metric-card:hover {
@@ -477,7 +481,7 @@ p {
 
 .metric-value {
   font-family: var(--font-mono);
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: 700;
   background: var(--gradient-text);
   -webkit-background-clip: text;
@@ -486,6 +490,7 @@ p {
   margin-bottom: var(--space-xs);
   white-space: nowrap;
   overflow: visible;
+  line-height: 1.2;
 }
 
 .metric-label {
@@ -528,6 +533,9 @@ p {
 .code-block pre {
   margin: 0;
   color: var(--color-text-secondary);
+  white-space: pre;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 .code-block .keyword {
@@ -1079,11 +1087,27 @@ p {
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+@media (max-width: 900px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+}
+
 @media (max-width: 768px) {
   .grid-2,
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+  
+  .metric-value {
+    font-size: var(--text-lg);
   }
   
   .hero-metrics {
@@ -1206,6 +1230,13 @@ p {
   
   .mobile-code pre {
     font-size: 0.75rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .card .code-block {
+    max-width: 100%;
+    overflow-x: auto;
   }
 }
 
@@ -1306,6 +1337,100 @@ p {
   .card {
     break-inside: avoid;
     border: 1px solid #ccc;
+  }
+}
+
+/* ============================================
+   GALLERY
+   ============================================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: transform var(--transition-base);
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 10, 15, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-md);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h4 {
+  margin: 0 0 var(--space-xs) 0;
+  color: var(--color-cyan);
+  font-size: var(--text-lg);
+}
+
+.gallery-overlay p {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+  
+  .gallery-item {
+    aspect-ratio: 1 / 1;
+  }
+  
+  .gallery-overlay {
+    opacity: 1;
+    background: linear-gradient(180deg, transparent 30%, rgba(10, 10, 15, 0.9) 100%);
+    padding: var(--space-sm);
+  }
+  
+  .gallery-overlay h4 {
+    font-size: var(--text-base);
+  }
+  
+  .gallery-overlay p {
+    font-size: var(--text-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1482,6 +1607,14 @@ p {
   background-size: cover;
   background-position: center;
   overflow: hidden;
+}
+
+@media (min-width: 769px) {
+  .card-with-bg.bg-glass-neural,
+  .card-with-bg.bg-data-flow-micro {
+    background-position: center 30%;
+    background-size: 120% auto;
+  }
 }
 
 .card-with-bg::before {
