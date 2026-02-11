@@ -335,6 +335,85 @@
     });
   }
 
+  function initCarousel() {
+    const track = document.querySelector('.carousel-track');
+    if (!track) return;
+
+    const slides = track.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    
+    if (!slides.length) return;
+
+    let currentSlide = 0;
+
+    slides.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+      dot.addEventListener('click', () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function goToSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      
+      currentSlide = index;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+    let autoAdvance = setInterval(nextSlide, 5000);
+
+    track.addEventListener('mouseenter', () => clearInterval(autoAdvance));
+    track.addEventListener('mouseleave', () => {
+      autoAdvance = setInterval(nextSlide, 5000);
+    });
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+    }
+  }
+
   function init() {
     initHeroNetwork();
     initMetricsCounter();
@@ -344,6 +423,7 @@
     initNewsletterForm();
     initPipelineAnimation();
     initCodeBlocks();
+    initCarousel();
   }
 
   if (document.readyState === 'loading') {

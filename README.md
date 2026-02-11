@@ -1,11 +1,11 @@
 # ENGRAM
 
-## Cognitive Architecture with Hebbian Plasticity
+## The First Bio-Synthetic Mind
 
 [![Version](https://img.shields.io/badge/version-0.1.0-gold.svg)](https://engram.cloud)
 [![Status](https://img.shields.io/badge/status-Gold%20Standard-success.svg)](https://engram.cloud)
 
-**The First Bio-Synthetic Cognitive System Capable of True Learning**
+**A Cognitive System That Learns Like Biology, Thinks Like AI**
 
 [🌐 Live Website](https://engram.cloud) | [📖 Documentation](#system-architecture) | [🎨 Gallery](#visual-gallery)
 
@@ -13,7 +13,7 @@
 
 ## Executive Summary
 
-ENGRAM represents a breakthrough in artificial intelligence systems, integrating **Large Language Models (LLMs)** with **knowledge graph-based memory structures**, powered by a pioneering **Hebbian plasticity mechanism applied to computational graphs**.
+ENGRAM is **the first bio-synthetic cognitive system capable of true learning**. It represents a breakthrough in artificial intelligence, integrating **Large Language Models (LLMs)** with **knowledge graph-based memory structures**, powered by a pioneering **Hebbian plasticity mechanism**—the same principles that govern learning in biological brains.
 
 ### Key Innovation: The Plastify Module
 
