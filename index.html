@@ -32,6 +32,7 @@ description: Cognitive Architecture with Hebbian Plasticity - A Biologically-Ins
       <div class="hero-cta animate-fade-in-up stagger-4">
         <a href="#architecture" class="btn btn-primary btn-glow">Explore Architecture</a>
         <a href="#results" class="btn btn-secondary">View Results</a>
+        <a href="#newsletter" class="btn btn-accent">Subscribe</a>
       </div>
       
       <div class="hero-metrics animate-fade-in-up stagger-4">
@@ -51,6 +52,159 @@ description: Cognitive Architecture with Hebbian Plasticity - A Biologically-Ins
           <div class="hero-metric-value" data-count="0.2473" data-suffix="">0</div>
           <div class="hero-metric-label">Plasticity Score</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section section-bg-image bg-particle-field overlay-light" id="newsletter">
+    <div class="container">
+      <div class="newsletter card-with-bg bg-plasticity-flow reveal">
+        <h2 style="margin-bottom: var(--space-sm);">Stay Updated</h2>
+        <p>Be the first to know about ENGRAM developments, technical documentation, and new releases.</p>
+        
+        <form id="subscribe-form" class="subscribe-form">
+          <input 
+            type="email" 
+            id="email-input"
+            placeholder="your@email.com" 
+            required
+            aria-label="Email address"
+          />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+          <p id="form-message" class="form-message"></p>
+        <!-- Newsletter Form Script -->
+        <script>
+          // ===== CONFIGURACIÓN =====
+          const SUPABASE_URL = "https://yfofmawbvlontugygfcj.supabase.co/rest/v1/emails";
+          const SUPABASE_ANON_KEY = "sb_publishable_EFI12D4AaO2Y7o5gyWrB-g_i--T5Arz";
+          const MAX_EMAIL_LENGTH = 254;
+          const ALLOWED_EMAIL_CHARS = /^[a-zA-Z0-9@._-]+$/;
+
+          // ===== DOM ELEMENTS =====
+          const emailInput = document.getElementById("email-input");
+          const message = document.getElementById("form-message");
+
+          // ===== VALIDATION FUNCTIONS =====
+          function sanitizeEmail(email) {
+            email = email.trim();
+            email = email.replace(/[^a-zA-Z0-9@._-]/g, '');
+            return email;
+          }
+
+          function validateEmailFormat(email) {
+            const emailRegex = /^[a-zA-Z0-9][a-zA-Z0-9._-]*@[a-zA-Z0-9][a-zA-Z0-9.-]*\.[a-zA-Z]{2,}$/;
+            return emailRegex.test(email);
+          }
+
+          function validateEmailLength(email) {
+            return email.length <= MAX_EMAIL_LENGTH;
+          }
+
+          function validateEmail(email) {
+            if (!email) {
+              return { valid: false, error: "Email is required" };
+            }
+
+            if (!validateEmailLength(email)) {
+              return { valid: false, error: `Email exceeds ${MAX_EMAIL_LENGTH} characters limit` };
+            }
+
+            if (!ALLOWED_EMAIL_CHARS.test(email)) {
+              return { valid: false, error: "Email contains invalid characters. Only letters, numbers, @._- are allowed" };
+            }
+
+            if (!validateEmailFormat(email)) {
+              return { valid: false, error: "Invalid email format. Must be user@domain.com" };
+            }
+
+            return { valid: true };
+          }
+
+          // ===== REAL-TIME VALIDATION =====
+          emailInput.addEventListener("input", function(e) {
+            const email = e.target.value;
+            const validation = validateEmail(email);
+
+            if (email.length === 0) {
+              message.textContent = "";
+              message.className = "form-message";
+              return;
+            }
+
+            if (!validation.valid) {
+              message.textContent = validation.error;
+              message.className = "form-message error";
+              return;
+            }
+
+            message.textContent = "Valid email format";
+            message.className = "form-message success";
+          });
+
+          emailInput.addEventListener("blur", function(e) {
+            const email = e.target.value;
+            if (email.length === 0) {
+              message.textContent = "";
+              message.className = "form-message";
+            }
+          });
+
+          // ===== FORM SUBMISSION =====
+          document
+            .getElementById("subscribe-form")
+            .addEventListener("submit", async function (e) {
+              e.preventDefault();
+
+              const email = sanitizeEmail(emailInput.value);
+              const validation = validateEmail(email);
+
+              if (!validation.valid) {
+                message.textContent = validation.error;
+                message.className = "form-message error";
+                return;
+              }
+
+              message.className = "form-message info";
+              message.textContent = "Submitting...";
+
+              try {
+                const response = await fetch(SUPABASE_URL, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "apikey": SUPABASE_ANON_KEY,
+                    "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
+                    "Prefer": "return=minimal"
+                  },
+                  body: JSON.stringify({ email })
+                });
+
+                if (response.status === 201 || response.status === 204) {
+                  message.textContent = "Subscribed.";
+                  emailInput.value = "";
+                  message.className = "form-message success";
+                  return;
+                }
+
+                if (response.status === 409) {
+                  message.textContent = "Already subscribed.";
+                  message.className = "form-message warning";
+                  return;
+                }
+
+                const errorText = await response.text();
+                message.textContent = "Error. Try again later.";
+                message.className = "form-message error";
+                console.error(errorText);
+
+              } catch (error) {
+                console.error(error);
+                message.textContent = "Network error. Check console.";
+                message.className = "form-message error";
+              }
+            });
+        </script>
       </div>
     </div>
   </section>
@@ -821,149 +975,9 @@ plastify_result = await cognee.plastify(
         </table>
       </div>
     </div>
-  </section>
+   </section>
 
-  <!-- NEWSLETTER -->
-  <section class="section section-bg-image bg-particle-field overlay-light" id="newsletter">
-    <div class="container">
-      <div class="newsletter card-with-bg bg-plasticity-flow reveal">
-        <h2 style="margin-bottom: var(--space-sm);">Stay Updated</h2>
-        <p>Be the first to know about ENGRAM developments, technical documentation, and new releases.</p>
-        
-        <form id="subscribe-form" class="subscribe-form">
-          <input 
-            type="email" 
-            id="email-input"
-            placeholder="your@email.com" 
-            required
-            aria-label="Email address"
-          />
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-          <p id="form-message" class="form-message"></p>
-<!-- Newsletter Form Script -->
-        <script>          const MAX_EMAIL_LENGTH = 254;
-          const ALLOWED_EMAIL_CHARS = /^[a-zA-Z0-9@._-]+$/;
-          
-          function sanitizeEmail(email) {
-            // Remover espacios en blanco
-            email = email.trim();
-            // Filtrar solo caracteres permitidos
-            email = email.replace(/[^a-zA-Z0-9@._-]/g, '');
-            return email;
-          }
-          
-          function validateEmailFormat(email) {
-            // Regex estricto para formato de email
-            const emailRegex = /^[a-zA-Z0-9][a-zA-Z0-9._-]*@[a-zA-Z0-9][a-zA-Z0-9.-]*\.[a-zA-Z]{2,}$/;
-            return emailRegex.test(email);
-          }
-          
-          function validateEmailLength(email) {
-            return email.length <= MAX_EMAIL_LENGTH;
-          }
-          
-          function validateEmail(email) {
-            if (!email) {
-              return { valid: false, error: "Email is required" };
-            }
-            
-            if (!validateEmailLength(email)) {
-              return { valid: false, error: `Email exceeds ${MAX_EMAIL_LENGTH} characters limit` };
-            }
-            
-            if (!ALLOWED_EMAIL_CHARS.test(email)) {
-              return { valid: false, error: "Email contains invalid characters. Only letters, numbers, @._- are allowed" };
-            }
-            
-            if (!validateEmailFormat(email)) {
-              return { valid: false, error: "Invalid email format. Must be user@domain.com" };
-            }
-            
-            return { valid: true };
-          }
-
-          // Validación en tiempo real
-          emailInput.addEventListener("input", function(e) {
-            const email = e.target.value;
-            const validation = validateEmail(email);
-            
-            if (email.length === 0) {
-              message.textContent = "";
-              message.className = "form-message";
-              return;
-            }
-            
-            if (!validation.valid) {
-              message.textContent = validation.error;
-              message.className = "form-message error";
-              return;
-            }
-            
-            message.textContent = "Valid email format";
-            message.className = "form-message success";
-          });
-          
-          emailInput.addEventListener("blur", function(e) {
-            const email = e.target.value;
-            if (email.length === 0) {
-              message.textContent = "";
-              message.className = "form-message";
-            }
-          });
-
-          document
-            .getElementById("subscribe-form")
-            .addEventListener("submit", async function (e) {
-              e.preventDefault();
-
-               const validation = validateEmail(email);
-               if (!validation.valid) {
-                 message.textContent = validation.error;
-                 message.className = "form-message error";
-                 return;
-               }
-               
-               message.className = "form-message info";
-               message.textContent = "Submitting...";
-
-              try {
-                const response = await fetch(SUPABASE_URL, {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                    "apikey": SUPABASE_ANON_KEY,
-                    "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
-                    "Prefer": "return=minimal"
-                  },
-                  body: JSON.stringify({ email })
-                });
-
-                if (response.status === 201 || response.status === 204) {
-                  message.textContent = "Subscribed.";
-                  emailInput.value = "";
-                  return;
-                }
-
-                if (response.status === 409) {
-                  message.textContent = "Already subscribed.";
-                  return;
-                }
-
-                const errorText = await response.text();
-                message.textContent = "Error. Try again later.";
-                console.error(errorText);
-
-              } catch (error) {
-                console.error(error);
-                message.textContent = "Network error.";
-              }
-            });
-        </script>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
+   <!-- GALLERY -->
   <section class="section" id="gallery">
     <div class="container">
       <div class="section-header reveal">
