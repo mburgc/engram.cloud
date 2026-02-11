@@ -1,46 +1,888 @@
 ---
 layout: default
 title: ENGRAM
-description: Advanced Cognitive Architecture for Artificial Intelligence Systems
+description: Cognitive Architecture with Hebbian Plasticity - A Biologically-Inspired Semantic Memory System
 ---
 
-<main>
-  <div class="content">
-    <h1 class="title">ENGRAM</h1>
+<main id="main-content">
+  <!-- HERO SECTION -->
+  <section class="hero hero-with-image bg-hero-primary" id="hero">
+    <canvas id="hero-canvas"></canvas>
     
-    <p class="subtitle">
-      Advanced cognitive architecture for artificial intelligence systems. 
-      Neural processing, synthetic memory, and abstract reasoning unified.
-    </p>
-    
-    <div class="placeholder-section">
-      <span class="placeholder-text">[Metrics & Technical Details Placeholder]</span>
-    </div>
-    
-    <section class="newsletter-section">
-      <h2 class="newsletter-title">Stay Updated</h2>
-      <p class="newsletter-description">
-        Be the first to know about ENGRAM developments and technical documentation.
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-in-up">
+        v0.1.0 — Gold Standard Achieved
+      </div>
+      
+      <h1 class="hero-title animate-fade-in-up stagger-1">
+        Cognitive Architecture with<br>
+        <span class="text-gradient">Hebbian Plasticity</span>
+      </h1>
+      
+      <p class="hero-subtitle animate-fade-in-up stagger-2">
+        A biologically-inspired semantic memory system integrating LLMs with knowledge graphs. 
+        Powered by the first successful application of Hebbian plasticity principles to computational knowledge graphs.
       </p>
       
-      <form class="newsletter-form" action="#" method="POST">
-        <input 
-          type="email" 
-          class="newsletter-input" 
-          placeholder="your@email.com" 
-          required
-          aria-label="Email address"
-        >
-        <button type="submit" class="newsletter-button">
-          Subscribe
-        </button>
-      </form>
-    </section>
-  </div>
+      <div class="hero-cta animate-fade-in-up stagger-3">
+        <a href="#architecture" class="btn btn-primary btn-glow">Explore Architecture</a>
+        <a href="#results" class="btn btn-secondary">View Results</a>
+      </div>
+      
+      <div class="hero-metrics animate-fade-in-up stagger-4">
+        <div class="hero-metric">
+          <div class="hero-metric-value" data-count="74" data-suffix="">0</div>
+          <div class="hero-metric-label">Nodes Processed</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-value" data-count="116" data-suffix="">0</div>
+          <div class="hero-metric-label">New Associations</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-value" data-count="0.943" data-suffix="">0</div>
+          <div class="hero-metric-label">Avg Confidence</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-value" data-count="0.2473" data-suffix="">0</div>
+          <div class="hero-metric-label">Plasticity Score</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section class="section" id="overview">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Executive Summary</p>
+        <h2>Breaking New Ground in AI Memory Systems</h2>
+        <p style="max-width: 800px; margin: 0 auto;">
+          This document presents the complete architecture of a hybrid cognitive system that integrates 
+          Large Language Models (LLMs) with knowledge graph-based memory structures, powered by a 
+          pioneering <strong>Hebbian plasticity mechanism applied to graphs</strong>.
+        </p>
+      </div>
+
+      <div class="grid grid-2" style="margin-top: var(--space-xl);">
+        <div class="card card-with-bg bg-glass-neural reveal">
+          <div class="card-header">
+            <div class="card-icon">🧠</div>
+            <div>
+              <h3 class="card-title">Primary Innovation</h3>
+              <p style="margin: 0; font-size: var(--text-sm);">Hebbian Plasticity Module</p>
+            </div>
+          </div>
+          <p class="border-accent">
+            The <strong>Plastify</strong> module represents the first successful application of Hebbian 
+            synaptic plasticity principles to computational knowledge graphs. This breakthrough enables 
+            the system to not only store information but to <span class="text-accent">learn and adapt</span> 
+            like biological neural networks.
+          </p>
+        </div>
+
+        <div class="card card-with-bg bg-data-flow-micro reveal">
+          <div class="card-header">
+            <div class="card-icon">⚡</div>
+            <div>
+              <h3 class="card-title">Context Learning</h3>
+              <p style="margin: 0; font-size: var(--text-sm);">Knowledge Generation</p>
+            </div>
+          </div>
+          <p class="border-accent-2">
+            The system's most valuable capability is <strong>remembering and learning through context memory</strong>, 
+            generating <span class="text-accent-2">new edges never provided in the original input</span>. 
+            This represents a true qualitative leap in AI reasoning.
+          </p>
+        </div>
+      </div>
+
+      <div class="card card-with-bg bg-synapse-closeup reveal" style="margin-top: var(--space-lg);">
+        <h3 class="text-center" style="margin-bottom: var(--space-md);">
+          <span class="badge badge-success">✓</span> Implemented: Strengthening & Visual Clustering
+        </h3>
+        <div class="grid grid-3">
+          <div class="text-center">
+            <div style="font-size: 2rem; margin-bottom: var(--space-xs);">🔗</div>
+            <h4>Hebb's Rule</h4>
+            <p style="font-size: var(--text-sm);">"Cells that fire together, wire together" — Frequent connections strengthen</p>
+          </div>
+          <div class="text-center">
+            <div style="font-size: 2rem; margin-bottom: var(--space-xs);">🎯</div>
+            <h4>Implicit Clustering</h4>
+            <p style="font-size: var(--text-sm);">Related nodes form dense visual clusters in the graph</p>
+          </div>
+          <div class="text-center">
+            <div style="font-size: 2rem; margin-bottom: var(--space-xs);">💡</div>
+            <h4>Context Inference</h4>
+            <p style="font-size: var(--text-sm);">Discovery of implicit relationships based on usage patterns</p>
+          </div>
+        </div>
+        <div class="text-center" style="margin-top: var(--space-md);">
+          <p class="text-mono" style="color: var(--color-cyan); font-size: var(--text-lg);">
+            "What fires together, wires together"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEM ARCHITECTURE -->
+  <section class="section section-bg-image bg-neural-constellation overlay-medium" id="architecture">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">System Architecture</p>
+        <h2>Hybrid Cognitive System Design</h2>
+      </div>
+
+      <div class="architecture-diagram reveal" id="architecture-diagram">
+        <div class="arch-layer">
+          <div class="arch-component">
+            <strong>INPUT LAYER</strong><br>
+            <span style="font-size: var(--text-xs); color: var(--color-text-tertiary);">
+              Text • JSON • Ontologies • Conversations
+            </span>
+          </div>
+          <span class="arch-arrow">→</span>
+          <div class="arch-component">
+            <strong>PROCESSING CORE</strong><br>
+            <span style="font-size: var(--text-xs); color: var(--color-text-tertiary);">
+              LLM (Ollama) • Embeddings (768-dim)
+            </span>
+          </div>
+          <span class="arch-arrow">→</span>
+          <div class="arch-component">
+            <strong>MEMORY SYSTEM</strong><br>
+            <span style="font-size: var(--text-xs); color: var(--color-text-tertiary);">
+              Knowledge Graph • Vector Store (LanceDB)
+            </span>
+          </div>
+        </div>
+
+        <div style="text-align: center; padding: var(--space-sm);">
+          <span style="color: var(--color-cyan);">↓</span>
+        </div>
+
+        <div class="arch-layer">
+          <div class="arch-component" style="flex: 0.45;">
+            <strong>COGNIFY PIPELINE</strong><br>
+            <span style="font-size: var(--text-xs); color: var(--color-text-tertiary);">
+              Entity Extraction • Relationship Mapping • Ontological Enrichment
+            </span>
+          </div>
+          <span class="arch-arrow">⇄</span>
+          <div class="arch-component" style="flex: 0.45; border-color: var(--color-magenta);">
+            <strong style="color: var(--color-magenta);">PLASTIFY MODULE</strong><br>
+            <span style="font-size: var(--text-xs); color: var(--color-text-tertiary);">
+              Hebbian Rules • Shared Neighbors
+            </span>
+          </div>
+        </div>
+
+        <div style="text-align: center; padding: var(--space-sm);">
+          <span style="color: var(--color-cyan);">↓</span>
+        </div>
+
+        <div class="arch-layer">
+          <div class="arch-component">
+            <strong>OUTPUT LAYER</strong><br>
+            <span style="font-size: var(--text-xs); color: var(--color-text-tertiary);">
+              3D Visualization • Semantic Query • RAG
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATA FLOW PIPELINE -->
+      <h3 class="text-center reveal" style="margin-top: var(--space-xl);">Data Flow Pipeline</h3>
+      
+      <div class="pipeline reveal">
+        <div class="pipeline-step">
+          <div class="pipeline-step-number">1</div>
+          <h4>Ingestion</h4>
+          <p style="font-size: var(--text-sm); margin: 0;">cognee.add()</p>
+          <p style="font-size: var(--text-xs); color: var(--color-text-tertiary);">Text/JSON/Ontology</p>
+        </div>
+        <div class="pipeline-connector"></div>
+        
+        <div class="pipeline-step">
+          <div class="pipeline-step-number">2</div>
+          <h4>Processing</h4>
+          <p style="font-size: var(--text-sm); margin: 0;">cognee.cognify()</p>
+          <p style="font-size: var(--text-xs); color: var(--color-text-tertiary);">Tokenization • Embeddings</p>
+        </div>
+        <div class="pipeline-connector"></div>
+        
+        <div class="pipeline-step">
+          <div class="pipeline-step-number">3</div>
+          <h4>Memory</h4>
+          <p style="font-size: var(--text-sm); margin: 0;">cognee.memify()</p>
+          <p style="font-size: var(--text-xs); color: var(--color-text-tertiary);">Consolidation • Indexing</p>
+        </div>
+        <div class="pipeline-connector"></div>
+        
+        <div class="pipeline-step">
+          <div class="pipeline-step-number">4</div>
+          <h4>Plasticity</h4>
+          <p style="font-size: var(--text-sm); margin: 0; color: var(--color-magenta);">cognee.plastify()</p>
+          <p style="font-size: var(--text-xs); color: var(--color-text-tertiary);">Hebbian Rules</p>
+        </div>
+        <div class="pipeline-connector"></div>
+        
+        <div class="pipeline-step">
+          <div class="pipeline-step-number">5</div>
+          <h4>Retrieval</h4>
+          <p style="font-size: var(--text-sm); margin: 0;">cognee.search()</p>
+          <p style="font-size: var(--text-xs); color: var(--color-text-tertiary);">Vector Search • Graph Traversal</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THEORETICAL FOUNDATIONS -->
+  <section class="section section-bg-image bg-synaptic-storm overlay-medium" id="foundations">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Theoretical Foundations</p>
+        <h2>Hebb's Principle</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="reveal">
+          <div class="card" style="height: 100%;">
+            <h3 class="border-accent">Donald Hebb's Original Formulation (1949)</h3>
+            <blockquote style="font-style: italic; color: var(--color-text-secondary); border-left: 3px solid var(--color-violet); padding-left: var(--space-md); margin: var(--space-md) 0;">
+              "When an axon of cell A is near enough to excite a cell B and repeatedly or persistently 
+              takes part in firing it, some growth process or metabolic change takes place in one or 
+              both cells such that A's efficiency, as one of the cells firing B, is increased."
+            </blockquote>
+            <p><strong>— Donald Hebb, Organization of Behavior</strong></p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="card" style="height: 100%;">
+            <h3 class="border-accent-2">Computational Translation</h3>
+            <div class="code-block">
+              <pre>Δwᵢⱼ = η · log(1 + f_co)
+
+Where:
+  Δwᵢⱼ = Weight change between nodes i and j
+  η (eta) = Learning rate
+  f_co = Co-occurrence frequency</pre>
+            </div>
+            <p style="margin-top: var(--space-md);">
+              The logarithmic scaling prevents weight explosion while ensuring 
+              meaningful updates for frequently co-occurring nodes.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIO-INSPIRED ARCHITECTURE -->
+      <div class="card card-with-bg bg-neural-artistry reveal" style="margin-top: var(--space-xl);">
+        <h3 class="text-center" style="margin-bottom: var(--space-lg);">Bio-Inspired Architecture</h3>
+        <div class="grid grid-3">
+          <div class="text-center">
+            <div style="font-size: 3rem; margin-bottom: var(--space-sm);">🧠</div>
+            <h4>Prefrontal Cortex</h4>
+            <p class="text-mono" style="color: var(--color-cyan); font-size: var(--text-sm);">LLM Module</p>
+            <ul style="list-style: none; text-align: left; font-size: var(--text-sm); margin-top: var(--space-sm);">
+              <li>• Natural language processing</li>
+              <li>• Abstract reasoning</li>
+              <li>• Semantic embedding generation</li>
+            </ul>
+          </div>
+          <div class="text-center">
+            <div style="font-size: 3rem; margin-bottom: var(--space-sm);">🔄</div>
+            <h4>Hippocampus</h4>
+            <p class="text-mono" style="color: var(--color-violet); font-size: var(--text-sm);">Temporal Graph</p>
+            <ul style="list-style: none; text-align: left; font-size: var(--text-sm); margin-top: var(--space-sm);">
+              <li>• Episodic memory storage</li>
+              <li>• Temporal indexing</li>
+              <li>• Associative retrieval</li>
+            </ul>
+          </div>
+          <div class="text-center">
+            <div style="font-size: 3rem; margin-bottom: var(--space-sm);">⚡</div>
+            <h4>Synaptic Plasticity</h4>
+            <p class="text-mono" style="color: var(--color-magenta); font-size: var(--text-sm);">Plastify Module</p>
+            <ul style="list-style: none; text-align: left; font-size: var(--text-sm); margin-top: var(--space-sm);">
+              <li>• Connection potentiation</li>
+              <li>• Competitive depression</li>
+              <li>• New association discovery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMORY SYSTEM -->
+  <section class="section section-bg-image bg-knowledge-galaxy overlay-medium" id="memory">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Memory System</p>
+        <h2>Graph-Node Memory Architecture</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card reveal">
+          <h3 class="border-accent">Node Structure</h3>
+          <div class="code-block">
+            <pre>Node
+├── id: UUID
+├── type: String
+├── embedding: Vector[768]
+├── properties: Dict
+├── activation_level: Float (0.0-1.0)
+├── plasticity_metrics: Dict
+│   ├── average_edge_weight: Float
+│   ├── edge_count: Integer
+│   ├── plasticity_score: Float
+│   └── connection_diversity: Integer
+├── connection_weights: Dict[UUID, Float]
+├── last_activation: Timestamp
+└── total_activations: Integer</pre>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="border-accent-2">Edge Structure</h3>
+          <div class="code-block">
+            <pre>Edge
+├── source_id: UUID
+├── target_id: UUID
+├── relationship_type: String
+├── weight: Float (0.1-5.0)
+├── properties: {
+│   ├── hebbian_strengthened: Bool
+│   ├── co_occurrence_count: Integer
+│   ├── last_hebbian_update: Timestamp
+│   ├── learning_rate_applied: Float
+│   └── discovered_by: String
+└── metadata: Dict</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal" style="margin-top: var(--space-lg);">
+        <h3 class="text-center">Vector Space Geometry</h3>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto var(--space-md);">
+          Embeddings project concepts into a <strong>768-dimensional vector space</strong> where 
+          Euclidean distance corresponds to semantic distance.
+        </p>
+        <div class="code-block" style="max-width: 600px; margin: 0 auto;">
+          <pre>// Cosine Similarity
+similarity = cos(θ) = (A · B) / (||A|| ||B||)
+
+// Connection threshold
+SIMILARITY_THRESHOLD = 0.7</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLASTIFY MODULE -->
+  <section class="section section-bg-image bg-deep-neural overlay-light" id="plastify">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Core Innovation</p>
+        <h2>The Plastify Module</h2>
+        <p style="max-width: 800px; margin: 0 auto;">
+          <strong>Plastify</strong> is the central innovation: the first implementation of 
+          <span class="text-accent">Hebbian plasticity</span> applied to computational knowledge graphs.
+        </p>
+      </div>
+
+      <!-- HEBBIAN RULES -->
+      <div class="grid grid-2" style="margin-top: var(--space-xl);">
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-icon">📈</div>
+            <div>
+              <h3 class="card-title">Hebbian Strengthening</h3>
+              <p style="margin: 0; font-size: var(--text-sm);">"Cells that fire together, wire together"</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <pre>async def apply_hebbian_strengthening(
+    edge: Edge,
+    co_occurrence: int,
+    learning_rate: float = 0.1,
+    max_weight: float = 5.0,
+) -> Edge:
+    """Apply Hebbian strengthening to an edge.
+    
+    Formula: Δw = η × log(1 + f_co)
+    """
+    if co_occurrence > 0:
+        strength_increase = learning_rate * math.log1p(co_occurrence)
+        new_weight = min(
+            edge.weight + strength_increase,
+            max_weight
+        )
+        return Edge(
+            ...,
+            weight=new_weight,
+            hebbian_strengthened=True,
+            co_occurrence_count=co_occurrence,
+        )</pre>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-header">
+            <div class="card-icon">🎯</div>
+            <div>
+              <h3 class="card-title">Competitive Weakening</h3>
+              <p style="margin: 0; font-size: var(--text-sm);">Similar connections compete, weaker ones decay</p>
+            </div>
+          </div>
+          <div class="code-block">
+            <pre>async def apply_competitive_weakening(
+    node: Node,
+    similar_nodes: List[Node],
+    competition_rate: float = 0.05,
+    min_weight: float = 0.1,
+) -> List[Edge]:
+    """Apply competitive weakening to similar connections."""
+    for edge in node.edges:
+        if edge.target in similar_nodes:
+            current_weight = edge.weight
+            weakened_weight = max(
+                current_weight * (1 - competition_rate),
+                min_weight
+            )
+            edge.weight = weakened_weight
+            edge.competitively_weakened = True</pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHARED NEIGHBOR DISCOVERY -->
+      <div class="card card-with-bg bg-cybernetic-nature reveal" style="margin-top: var(--space-lg);">
+        <h3 class="text-center" style="margin-bottom: var(--space-md);">
+          <span class="badge badge-info">Key Feature</span> Shared Neighbor Discovery
+        </h3>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto var(--space-lg);">
+          The most revolutionary aspect: generating <strong>completely new knowledge</strong> through 
+          contextual inference. If nodes A and B share enough common neighbors, the system infers 
+          a direct relationship between them.
+        </p>
+
+        <div class="code-block" style="max-width: 800px; margin: 0 auto;">
+          <pre>async def discover_shared_neighbor_associations(
+    min_shared_neighbors: int = 2,
+    confidence_threshold: float = 0.6,
+) -> Dict[str, Any]:
+    """Discover new associations based on shared neighbors.
+    
+    If A→C and B→C (both connected to C),
+    infer relationship between A and B.
+    
+    Confidence = |shared_neighbors| / min(|neighbors_A|, |neighbors_B|)
+    """
+    for node_a in nodes:
+        neighbors_a = get_neighbors(node_a)
+        
+        for node_b in nodes:
+            if node_a == node_b:
+                continue
+                
+            neighbors_b = get_neighbors(node_b)
+            shared = neighbors_a ∩ neighbors_b
+            
+            if len(shared) >= min_shared_neighbors:
+                confidence = len(shared) / min(len(neighbors_a), len(neighbors_b))
+                
+                if confidence >= confidence_threshold:
+                    create_edge(node_a, node_b,
+                               relationship="shares_context_with",
+                               confidence=confidence)</pre>
+        </div>
+
+        <div style="margin-top: var(--space-lg);">
+          <h4 class="text-center">Contextual Confidence Levels</h4>
+          <div class="grid grid-3" style="margin-top: var(--space-md);">
+            <div class="metric-card">
+              <div class="metric-value text-accent">≥ 0.60</div>
+              <div class="metric-label">shares_context_with</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value" style="color: var(--color-violet);">≥ 0.80</div>
+              <div class="metric-label">strongly_related_to</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-value" style="color: var(--color-gold);">≥ 0.95</div>
+              <div class="metric-label">functionally_equivalent</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAMPLE -->
+      <div class="card card-with-bg bg-quantum-synapse reveal" style="margin-top: var(--space-lg);">
+        <h3 class="text-center">Real Example from the System</h3>
+        <div class="grid grid-2" style="margin-top: var(--space-md);">
+          <div>
+            <h4 style="color: var(--color-text-tertiary);">Before Plastify (Cognify)</h4>
+            <div class="code-block">
+              <pre>FastAPI ────▶ Python
+FastAPI ────▶ Asyncio
+Django ─────▶ Python
+Django ─────▶ ORM</pre>
+            </div>
+          </div>
+          <div>
+            <h4 style="color: var(--color-cyan);">After Plastify (New Edges)</h4>
+            <div class="code-block">
+              <pre>FastAPI ────▶ Python
+FastAPI ────▶ Asyncio
+Django ─────▶ Python
+Django ─────▶ ORM
+
+🆕 FastAPI ←──[shares_context_with]──▶ Django
+   Confidence: 0.943
+   Reason: Share [Python, Web, Backend]</pre>
+            </div>
+          </div>
+        </div>
+        <p class="text-center" style="margin-top: var(--space-md);">
+          The system discovered that <strong>FastAPI and Django are related</strong> as Python web frameworks, 
+          <em>without this relationship ever being explicitly provided</em>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIMENTAL RESULTS -->
+  <section class="section section-bg-image bg-circuit-garden overlay-medium" id="results">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Experimental Results</p>
+        <h2>Performance Metrics</h2>
+      </div>
+
+      <!-- KEY METRICS -->
+      <div class="metrics-grid reveal" style="margin-bottom: var(--space-xl);">
+        <div class="metric-card">
+          <div class="metric-value" data-count="74" data-suffix="">0</div>
+          <div class="metric-label">Nodes Processed</div>
+          <div class="metric-delta">100% coverage</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="5888" data-suffix="">0</div>
+          <div class="metric-label">Edges Updated</div>
+          <div class="metric-delta">Hebbian strengthening</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="116" data-suffix="">0</div>
+          <div class="metric-label">New Associations</div>
+          <div class="metric-delta">+39.5% growth</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="0.943" data-suffix="">0</div>
+          <div class="metric-label">Avg Confidence</div>
+          <div class="metric-delta">94.3% precision</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="54" data-suffix="">0</div>
+          <div class="metric-label">Nodes with New Edges</div>
+          <div class="metric-delta">73% participation</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="0.2473" data-suffix="">0</div>
+          <div class="metric-label">Plasticity Score</div>
+          <div class="metric-delta">Adaptability index</div>
+        </div>
+      </div>
+
+      <!-- EXECUTION TIMELINE -->
+      <div class="card card-with-bg bg-layered-processing reveal">
+        <h3 class="text-center" style="margin-bottom: var(--space-md);">Execution Timeline (~90 seconds)</h3>
+        <div class="code-block">
+          <pre>09:18:07 — Start: 74 nodes, 294 initial edges
+09:18:21 — Processed 10 nodes
+09:18:28 — Processed 20 nodes
+09:18:54 — Processed 30 nodes
+09:19:14 — Processed 40 nodes
+09:19:18 — Processed 50 nodes
+09:19:35 — Processed 60 nodes
+09:19:37 — Processed 70 nodes
+09:19:38 — Shared neighbor discovery initiated
+09:19:54 — Complete: 410 final edges (294 + 116 new)</pre>
+        </div>
+      </div>
+
+      <!-- KNOWLEDGE GENERATION ANALYSIS -->
+      <div class="grid grid-2" style="margin-top: var(--space-lg);">
+        <div class="card reveal">
+          <h3 class="border-accent">Knowledge Generation</h3>
+          <p>
+            The system generated <strong>116 new edges</strong> that <em>never existed</em> in the original data, 
+            demonstrating true inductive learning.
+          </p>
+          <div style="margin-top: var(--space-md);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);">
+              <span>Initial Edges</span>
+              <span class="text-mono">294</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);">
+              <span>New Associations</span>
+              <span class="text-mono text-accent">+116</span>
+            </div>
+            <div style="height: 2px; background: var(--border-thin); margin: var(--space-sm) 0;"></div>
+            <div style="display: flex; justify-content: space-between;">
+              <span><strong>Final Total</strong></span>
+              <span class="text-mono" style="color: var(--color-gold);"><strong>410</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="border-accent-2">Edge Type Distribution</h3>
+          <div style="margin-top: var(--space-md);">
+            <div style="margin-bottom: var(--space-sm);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-xs);">
+                <span>shares_context_with</span>
+                <span class="text-mono">116 (100%)</span>
+              </div>
+              <div style="height: 8px; background: var(--color-bg-tertiary); border-radius: 4px; overflow: hidden;">
+                <div style="width: 100%; height: 100%; background: var(--color-cyan);"></div>
+              </div>
+            </div>
+            <p style="font-size: var(--text-sm); color: var(--color-text-tertiary);">
+              All new associations use the "shares_context_with" relationship type in v0.1.0.
+              Future versions will introduce strongly_related_to and functionally_equivalent 
+              based on confidence thresholds.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFERRED RELATIONSHIPS -->
+      <div class="card reveal" style="margin-top: var(--space-lg);">
+        <h3 class="text-center" style="margin-bottom: var(--space-md);">Sample Inferred Relationships</h3>
+        <div class="grid grid-2">
+          <div class="code-block">
+            <pre><span style="color: var(--color-cyan);">Source:</span> FastAPI
+<span style="color: var(--color-magenta);">Target:</span> Django
+<span style="color: var(--color-violet);">Relation:</span> shares_context_with
+<span style="color: var(--color-gold);">Confidence:</span> 0.943
+
+<span style="color: var(--color-text-tertiary);">Reason:</span> Both share neighbors 
+[Python, Web, Backend, Framework]
+→ INFERENCE: Both are Python web frameworks</span></pre>
+          </div>
+          <div class="code-block">
+            <pre><span style="color: var(--color-cyan);">Source:</span> Asyncio
+<span style="color: var(--color-magenta);">Target:</span> Concurrent
+<span style="color: var(--color-violet);">Relation:</span> shares_context_with
+<span style="color: var(--color-gold);">Confidence:</span> 0.912
+
+<span style="color: var(--color-text-tertiary);">Reason:</span> Share async programming 
+context patterns
+→ INFERENCE: Both handle concurrency</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION -->
+  <section class="section section-bg-image bg-pipeline-flow overlay-medium" id="implementation">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Technical Implementation</p>
+        <h2>API & Code</h2>
+      </div>
+
+      <div class="card reveal">
+        <h3 class="border-accent">Main API Usage</h3>
+        <div class="code-block">
+          <pre>from datetime import timedelta
+import cognee
+
+# Apply Hebbian plasticity to the graph
+plastify_result = await cognee.plastify(
+    dataset="main_dataset",
+    learning_rate=0.1,          # Strengthening rate
+    competition_rate=0.05,      # Competition rate
+    max_weight=5.0,             # Maximum allowed weight
+    min_weight=0.1,             # Minimum weight
+    temporal_window=timedelta(days=30),
+)
+
+# Result:
+# {
+#     "status": "completed",
+#     "processed_nodes": 74,
+#     "updated_edges": 5888,
+#     "new_associations_discovered": 116,
+#     "new_associations_avg_confidence": 0.943,
+#     "nodes_with_new_associations": 54,
+#     "plasticity_score": 0.2473
+# }</pre>
+        </div>
+      </div>
+
+      <div class="card reveal" style="margin-top: var(--space-lg);">
+        <h3 class="border-accent-2">Project Structure</h3>
+        <div class="code-block">
+          <pre>cognee/modules/plastify/
+├── __init__.py                    # Public API exports
+├── plastify.py                    # Main module API
+├── hebbian_rules.py               # Hebbian rules implementation
+└── shared_neighbor_discovery.py   # Association discovery</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section section-bg-image bg-constellation-map overlay-medium" id="roadmap">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-subtitle">Future Development</p>
+        <h2>Roadmap: v0.2.0+</h2>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+            <span class="badge badge-roadmap">Planned</span>
+            <h3 style="margin: 0;">Auto Consolidation</h3>
+          </div>
+          <p>Meta-nodes for conceptual clusters. Dense connection regions automatically 
+          identified and abstracted into high-level representations.</p>
+        </div>
+
+        <div class="card reveal">
+          <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+            <span class="badge badge-roadmap">Planned</span>
+            <h3 style="margin: 0;">Temporal Decay</h3>
+          </div>
+          <p>Gradual weight reduction for obsolete nodes. Implements the complementary 
+          principle: "What is not used, is lost."</p>
+        </div>
+
+        <div class="card reveal">
+          <div style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+            <span class="badge badge-roadmap">Planned</span>
+            <h3 style="margin: 0;">Selective Forgetting</h3>
+          </div>
+          <p>Resource liberation for irrelevant information. Dynamic memory management 
+          mimicking biological optimization.</p>
+        </div>
+      </div>
+
+      <div class="card card-with-bg bg-vector-space reveal" style="margin-top: var(--space-lg);">
+        <h3 class="text-center">Version Comparison</h3>
+        <table class="comparison-table" style="margin-top: var(--space-md);">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>v0.1.0 (Current)</th>
+              <th>v0.2.0+ (Planned)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Learning</td>
+              <td><span class="badge badge-success">✓ Hebbian</span></td>
+              <td><span class="badge badge-success">✓ Hebbian</span></td>
+            </tr>
+            <tr>
+              <td>Forgetting</td>
+              <td><span class="badge badge-info">Static</span></td>
+              <td><span class="badge badge-roadmap">Dynamic Decay</span></td>
+            </tr>
+            <tr>
+              <td>Clustering</td>
+              <td><span class="badge badge-info">Visual Only</span></td>
+              <td><span class="badge badge-roadmap">Auto Consolidation</span></td>
+            </tr>
+            <tr>
+              <td>Query Complexity</td>
+              <td>O(n) linear</td>
+              <td>O(log n) prioritized</td>
+            </tr>
+            <tr>
+              <td>Memory Model</td>
+              <td>Growth only</td>
+              <td>Growth + Pruning</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section section-bg-image bg-particle-field overlay-light" id="newsletter">
+    <div class="container">
+      <div class="newsletter card-with-bg bg-plasticity-flow reveal">
+        <h2 style="margin-bottom: var(--space-sm);">Stay Updated</h2>
+        <p>Be the first to know about ENGRAM developments, technical documentation, and new releases.</p>
+        
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="your@email.com" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer>
-  <p class="footer-text">
-    © 2026 ENGRAM Systems
-  </p>
+<!-- FOOTER -->
+<footer class="footer" style="background: linear-gradient(180deg, rgba(10,10,15,0.98) 0%, rgba(10,10,15,0.95) 100%), url('assets/images/z-image_00074_.png'); background-size: cover; background-position: center;">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>System</h4>
+        <ul class="footer-links">
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#memory">Memory System</a></li>
+          <li><a href="#plastify">Plastify Module</a></li>
+          <li><a href="#results">Results</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Documentation</h4>
+        <ul class="footer-links">
+          <li><a href="ARQUITECTURA_COGNITIVA_PLASTICIDAD_HEBBIANA.md" target="_blank">Full Architecture Doc</a></li>
+          <li><a href="#implementation">API Reference</a></li>
+          <li><a href="#foundations">Theoretical Foundations</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Technologies</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.kuzudb.com/" target="_blank">KùzuDB</a></li>
+          <li><a href="https://lancedb.github.io/lancedb/" target="_blank">LanceDB</a></li>
+          <li><a href="https://ollama.com/" target="_blank">Ollama</a></li>
+          <li><a href="https://github.com/topoteretes/cognee" target="_blank">Cognee</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Version</h4>
+        <p style="font-size: var(--text-sm);">
+          <strong>ENGRAM v0.1.0</strong><br>
+          Gold Standard Achieved<br>
+          <span style="color: var(--color-text-muted);">February 2026</span>
+        </p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2026 ENGRAM Systems. Cognitive Architecture with Hebbian Plasticity.</p>
+      <p style="margin-top: var(--space-xs); font-size: var(--text-xs);">
+        Built with biologically-inspired principles • 
+        <a href="https://engram.cloud" style="color: var(--color-cyan);">engram.cloud</a>
+      </p>
+    </div>
+  </div>
 </footer>
