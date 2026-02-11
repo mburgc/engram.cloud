@@ -240,6 +240,17 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
+/* Roadmap cards - ensure text doesn't get cut off */
+.roadmap-cards {
+  align-items: stretch;
+}
+
+.roadmap-cards .card {
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 .flex {
   display: flex;
 }
