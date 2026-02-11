@@ -1692,6 +1692,11 @@ p {
     background-position: center 30%;
     background-size: 120% auto;
   }
+  
+  /* Roadmap section - smaller titles for desktop to prevent cutoff */
+  .roadmap-title {
+    font-size: 1rem;
+  }
 }
 
 .card-with-bg::before {
