@@ -830,10 +830,65 @@ plastify_result = await cognee.plastify(
         <h2 style="margin-bottom: var(--space-sm);">Stay Updated</h2>
         <p>Be the first to know about ENGRAM developments, technical documentation, and new releases.</p>
         
-        <form class="newsletter-form">
-          <input type="email" class="newsletter-input" placeholder="your@email.com" required aria-label="Email address">
+        <form id="subscribe-form" class="subscribe-form">
+          <input 
+            type="email" 
+            id="email-input"
+            placeholder="your@email.com" 
+            required
+            aria-label="Email address"
+          />
           <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
+          <p id="form-message" class="form-message"></p>
+<!-- Newsletter Form Script -->
+        <script>
+          const SUPABASE_URL = "https://yfofmawbvlontugygfcj.supabase.co/rest/v1/emails";
+          const SUPABASE_ANON_KEY = "sb_publishable_EFI12D4AaO2Y7o5gyWrB-g_i--T5Arz";
+
+          document
+            .getElementById("subscribe-form")
+            .addEventListener("submit", async function (e) {
+              e.preventDefault();
+
+              const emailInput = document.getElementById("email-input");
+              const message = document.getElementById("form-message");
+              const email = emailInput.value.trim().toLowerCase();
+
+              message.textContent = "Submitting...";
+
+              try {
+                const response = await fetch(SUPABASE_URL, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "apikey": SUPABASE_ANON_KEY,
+                    "Authorization": `Bearer ${SUPABASE_ANON_KEY}`,
+                    "Prefer": "return=minimal"
+                  },
+                  body: JSON.stringify({ email })
+                });
+
+                if (response.status === 201 || response.status === 204) {
+                  message.textContent = "Subscribed.";
+                  emailInput.value = "";
+                  return;
+                }
+
+                if (response.status === 409) {
+                  message.textContent = "Already subscribed.";
+                  return;
+                }
+
+                const errorText = await response.text();
+                message.textContent = "Error. Try again later.";
+                console.error(errorText);
+
+              } catch (error) {
+                console.error(error);
+                message.textContent = "Network error.";
+              }
+            });
+        </script>
       </div>
     </div>
   </section>
