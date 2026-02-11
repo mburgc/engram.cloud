@@ -1,10 +1,34 @@
-# ImageZTurbo Prompts for ENGRAM Cognitive Architecture Website
+# Annex B: AI Image Generation Prompts
+## Complete Prompt Library for Neural-Themed Visual Assets
 
-## Design System Overview
+### Design System Overview
+
+This document contains the complete collection of prompts used to generate the 27 neural-themed images for the ENGRAM website. These prompts can be used with ImageZ, Midjourney, Stable Diffusion, or any AI image generation tool.
 
 **Visual Theme**: Scientific elegance meets neural complexity  
 **Color Palette**: Deep space dark (#0a0a0f) with electric cyan (#00d4ff), magenta (#ff006e), violet (#8338ec), and gold accents (#ffd700)  
 **Style**: Minimalist scientific aesthetic with bioluminescent accents, clean typography, sophisticated data visualizations
+
+**How to Use This Guide:**
+1. Select the appropriate prompt category for your needs
+2. Copy the prompt and adjust parameters if needed
+3. Generate images at 1200x1200px or 16:9 aspect ratio
+4. Apply CSS overlays (70-85% opacity) for web integration
+
+---
+
+## Quick Reference: Image Categories
+
+| Category | Prompts | Usage |
+|----------|---------|-------|
+| Hero Backgrounds | 1.1 - 1.3 | Main hero section |
+| Section Backgrounds | 3.1 - 10.3 | Content sections |
+| Card Backgrounds | 5.1 - 5.3 | Feature cards |
+| Footer Elements | 4.1 - 4.3 | Footer backgrounds |
+
+---
+
+## 1. HERO BACKGROUND IMAGE
 
 ---
 
