@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:ns1="http://example.org/philosophy#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+
+  <!-- Core Classes -->
+
+  <rdf:Description rdf:about="http://example.org/philosophy#Institution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#PhilosophicalSchool">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/philosophy#Institution"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#ConceptualArtifact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#MetaphysicalConcept">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/philosophy#ConceptualArtifact"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#EthicalFramework">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/philosophy#ConceptualArtifact"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#EpistemologicalModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.org/philosophy#ConceptualArtifact"/>
+  </rdf:Description>
+
+  <!-- Object Properties -->
+
+  <rdf:Description rdf:about="http://example.org/philosophy#articulates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/philosophy#PhilosophicalSchool"/>
+    <rdfs:range rdf:resource="http://example.org/philosophy#ConceptualArtifact"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#formulates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/philosophy#Institution"/>
+    <rdfs:range rdf:resource="http://example.org/philosophy#ConceptualArtifact"/>
+  </rdf:Description>
+
+  <!-- Philosophical Schools -->
+
+  <rdf:Description rdf:about="http://example.org/philosophy#Stoicism">
+    <rdf:type rdf:resource="http://example.org/philosophy#PhilosophicalSchool"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment>Emphasizes virtue, rational control, and alignment with nature.</rdfs:comment>
+    <ns1:articulates rdf:resource="http://example.org/philosophy#VirtueEthics"/>
+    <ns1:articulates rdf:resource="http://example.org/philosophy#Logos"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#Existentialism">
+    <rdf:type rdf:resource="http://example.org/philosophy#PhilosophicalSchool"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment>Centers on freedom, responsibility, and authenticity.</rdfs:comment>
+    <ns1:articulates rdf:resource="http://example.org/philosophy#Authenticity"/>
+    <ns1:articulates rdf:resource="http://example.org/philosophy#RadicalFreedom"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#AnalyticPhilosophy">
+    <rdf:type rdf:resource="http://example.org/philosophy#PhilosophicalSchool"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment>Prioritizes logical clarity and linguistic precision.</rdfs:comment>
+    <ns1:articulates rdf:resource="http://example.org/philosophy#LogicalAnalysis"/>
+  </rdf:Description>
+
+  <!-- Conceptual Artifacts -->
+
+  <rdf:Description rdf:about="http://example.org/philosophy#VirtueEthics">
+    <rdf:type rdf:resource="http://example.org/philosophy#EthicalFramework"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#Authenticity">
+    <rdf:type rdf:resource="http://example.org/philosophy#EthicalFramework"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#RadicalFreedom">
+    <rdf:type rdf:resource="http://example.org/philosophy#MetaphysicalConcept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#Logos">
+    <rdf:type rdf:resource="http://example.org/philosophy#MetaphysicalConcept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/philosophy#LogicalAnalysis">
+    <rdf:type rdf:resource="http://example.org/philosophy#EpistemologicalModel"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+
+</rdf:RDF>
